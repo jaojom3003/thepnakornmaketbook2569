@@ -10,8 +10,5 @@ export default defineConfig(({ mode }) => {
       outDir: 'dist',
       sourcemap: false,
     },
-    define: {
-      // Environment variable handling
-    }
   };
 });
