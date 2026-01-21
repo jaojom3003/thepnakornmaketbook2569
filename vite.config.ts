@@ -6,9 +6,12 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   return {
     plugins: [react()],
-    // Note: We no longer expose API_KEY here because we moved the logic to Supabase Edge Functions
+    build: {
+      outDir: 'dist',
+      sourcemap: false,
+    },
     define: {
-      // Keep other env vars if necessary, but removing API_KEY for security
+      // Environment variable handling
     }
   };
 });
