@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MOCK_STALLS, ZONE_LABELS } from './constants';
 import { Stall, BookingFormData, StallStatus, ZoneType } from './types';
-import StallGrid from './components/StallGrid';
+import MarketMap from './components/MarketMap';
 import BookingPanel from './components/BookingPanel';
 import AdminPanel from './components/AdminPanel';
 import LoginModal from './components/LoginModal';
@@ -318,7 +318,7 @@ const App: React.FC = () => {
                </button>
             </div>
           ) : (
-            <StallGrid 
+            <MarketMap 
               stalls={filteredStalls}
               selectedStallId={selectedStall?.id || null}
               onSelectStall={handleSelectStall}
